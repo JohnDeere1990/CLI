@@ -1,7 +1,7 @@
 # CLI
 A handy multi-purpose cli app that can help with math (& DnD).
 
-{{johndeere1990.github.io/cli}}{% 2019-03-03-test-post %}
+[Test Post]({{ site.baseurl }}{% post_url 2019-03-03-test-post %})
 
 ### Features
 - Help command using dictionaries
