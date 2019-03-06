@@ -13,10 +13,10 @@ THREEPLACES = Decimal(10) ** -3
 rounding_num = THREEPLACES
 
 separators = {
-		0: "--------------------",
-		1: "-Input--------------",
-		2: "-Output-------------",
-		3: "-Commands-----------"
+	0: "--------------------",
+	1: "-Input--------------",
+	2: "-Output-------------",
+	3: "-Commands-----------"
 }
 
 # endregion
