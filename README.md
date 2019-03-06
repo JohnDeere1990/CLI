@@ -17,5 +17,5 @@ A handy multi-purpose cli app that can help with math (& DnD).
 
 ### TODO
 - Add safety checks to prevent crashing when you don't enter a number
-- Get rid of over quantizing
+- Get rid of over quantification
 - Add comments explaining the code
