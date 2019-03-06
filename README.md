@@ -1,4 +1,5 @@
 # CLI
+A handy multi-purpose CLI app that can help with math (& DnD). I'm developing this in my free time. Feel free to suggest ideas or contribute to the project.
 
 ### Features
 - Help command using dictionaries
