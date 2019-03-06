@@ -1,6 +1,8 @@
 # CLI
 A handy multi-purpose cli app that can help with math (& DnD).
 
+{{ site.baseurl }}{% post_url 2019-03-03-test-post %}
+
 ### Features
 - Help command using dictionaries
 - Basic Calculator - Add, Sub, Mul, Div -- all at once using two given numbers
