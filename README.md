@@ -1,7 +1,7 @@
 # CLI
 A handy multi-purpose cli app that can help with math (& DnD).
 
-[Test Post]({{ site.baseurl }}{% post_url 2019-03-03-test-post %})
+[First Post]({{ site.baseurl }}{% post_url 2019-03-06-first-post %})
 
 ### Features
 - Help command using dictionaries
