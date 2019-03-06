@@ -117,7 +117,7 @@ def compound_interest():
 
 	separator(2)
 
-	amount = principal * pow((1 + (rate / num_times)), num_times * time)
+	amount = principal * pow((1 + div(rate / num_times)), num_times * time)
 	print("Compound Interest Amount = ", amount)
 
 	total_amount = principal + amount
@@ -133,7 +133,7 @@ def pop_change():
 	base_population = Decimal(float(input("--> ")))
 
 	print("Enter Rate of Change (1.4 = 1.4%):")
-	rate_of_change = Decimal(float(input("--> ")) / 100)
+	rate_of_change = Decimal(div(float(input("--> ") / 100)))
 
 	separator(2)
 
@@ -297,7 +297,7 @@ def f2c():
 
 	separator(2)
 
-	centigrade_calc = (fahrenheit - 32) * (5.0 / 9.0)
+	centigrade_calc = (fahrenheit - 32) * div(5.0 / 9.0)
 	print(str(qnt(fahrenheit)) + " Fahrenheit in Centigrade = " + str(qnt(centigrade_calc)))
 
 	separator(0)
