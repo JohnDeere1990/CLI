@@ -1,4 +1,4 @@
-#CLI
+# CLI
 
 ### Features
 - Help command using dictionaries
