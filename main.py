@@ -153,7 +153,8 @@ def pop_change():
 def sal_calc():
     separator(1)
 
-    print("Enter the input type: \n'a' = Annual \n'm' = monthly \n'bm' = Bi-Monthly \n'w' = Weekly \n'bw' = Bi-Weekly\n")
+    print("Enter the input type: \n'a' = Annual \n'm' = monthly \n'bm' = Bi-",
+          "Monthly \n'w' = Weekly \n'bw' = Bi-Weekly\n")
 
     input_type = input("--> ")
 
@@ -284,7 +285,8 @@ def c2f():
     separator(2)
 
     fahrenheit_calc = 1.8 * centigrade + 32
-    print(str(qnt(centigrade)) + " Centigrade in Fahrenheit = " + str(qnt(fahrenheit_calc)))
+    print(str(qnt(centigrade)) + " Centigrade in Fahrenheit = " + str(
+        qnt(fahrenheit_calc)))
 
     separator(0)
 
@@ -298,7 +300,8 @@ def f2c():
     separator(2)
 
     centigrade_calc = (fahrenheit - 32) * (5.0 / 9.0)
-    print(str(qnt(fahrenheit)) + " Fahrenheit in Centigrade = " + str(qnt(centigrade_calc)))
+    print(str(qnt(fahrenheit)) + " Fahrenheit in Centigrade = " + str(
+        qnt(centigrade_calc)))
 
     separator(0)
 
@@ -319,22 +322,22 @@ def rand_num():
 
     roll_array = []
     for i in range(0, count):
-    roll = random.randrange(min_num, max_num + 1)
-    roll_array.append(roll)
+        roll = random.randrange(min_num, max_num + 1)
+        roll_array.append(roll)
 
-    print("Unsorted List:")
-    print(str(roll_array))
+        print("Unsorted List:")
+        print(str(roll_array))
 
-    print("")
+        print("")
 
-    roll_array.sort()
-    print("Sorted List:")
-    print(str(roll_array))
+        roll_array.sort()
+        print("Sorted List:")
+        print(str(roll_array))
 
-    print("")
+        print("")
 
     for i in range(int(min_num), int(max_num + 1)):
-    print(str(i) + " appears " + str(roll_array.count(i)) + " times")
+        print(str(i) + " appears " + str(roll_array.count(i)) + " times")
 
     separator(0)
 
@@ -342,92 +345,89 @@ def rand_num():
 # Only works in python 3.6 or later
 def rpg():
     try:
-    import secrets
+        import secrets
 
-    alphabet = string.ascii_letters + string.digits
-    passwords = []
+        alphabet = string.ascii_letters + string.digits
+        passwords = []
 
-    separator(1)
+        separator(1)
 
-    try:
-    pass_length = int(input("Enter password length --> "))
-    except ValueError:
-    pass_length = 8
-    if pass_length == 0:
-    pass_length = 8
-    password = ''.join(secrets.choice(alphabet) for i in range(pass_length))
-    passwords.append(password)
+        try:
+            pass_length = int(input("Enter password length --> "))
+        except ValueError:
+            pass_length = 8
+        if pass_length == 0:
+            pass_length = 8
+        password = ''.join(secrets.choice(alphabet) for i in range(pass_length))
+        passwords.append(password)
 
-    separator(2)
-    print(passwords[-1])
-    separator(0)
+        separator(2)
+        print(passwords[-1])
+        separator(0)
 
-    with open("Generated Passwords.txt", "a") as f:
-    print("", file = f)
-    print(passwords[-1], file = f)
+        with open("Generated Passwords.txt", "a") as f:
+            print("", file=f)
+            print(passwords[-1], file=f)
 
     except ImportError:
-    print("")
-    print("The Random Password Generator only works in python 3.6 or newer!")
-    print("")
+        print("")
+        print("The Random Password Generator"
+              " only works in python 3.6 or newer!")
+        print("")
 
 # endregion
 
 
 if __name__ == '__main__':
-
-    loop = True
+    help_list = {
+        "bc": "Basic Calculator",
+        "tc": "Tax Calculator",
+        "ci": "Compound Interest Calculator",
+        "pc": "Population Change Calculator",
+        "sc": "Basic Salary Calculator",
+        "sct": "Sin, Cos, Tan",
+        "sct2": "ASin, ACos, ATan",
+        "c2f": "Centigrade to Fahrenheit",
+        "f2c": "Fahrenheit to Centigrade",
+        "numgen": "Random Number Generator",
+        "rpg": "Random Password Generator",
+        "help": "Shows this list",
+        "quit": "Quit the application"
+    }
 
     def cli_help():
-    separator(3)
+        separator(3)
     for i in help_list:
-    print(i, "=", help_list[i])
+        print(i, "=", help_list[i])
     separator(0)
 
-
     commands = {
-    "bc": basic_calc,
-    "tc": tax_calc,
-    "ci": compound_interest,
-    "pc": pop_change,
-    "sc": sal_calc,
-    "sct": sct,
-    "sct2": sct2,
-    "c2f": c2f,
-    "f2c": f2c,
-    "numgen": rand_num,
-    "rpg": rpg,
-    "help": cli_help,
-    "quit": quit
+        "bc": basic_calc,
+        "tc": tax_calc,
+        "ci": compound_interest,
+        "pc": pop_change,
+        "sc": sal_calc,
+        "sct": sct,
+        "sct2": sct2,
+        "c2f": c2f,
+        "f2c": f2c,
+        "numgen": rand_num,
+        "rpg": rpg,
+        "help": cli_help,
+        "quit": quit
     }
 
-    help_list = {
-    "bc": "Basic Calculator",
-    "tc": "Tax Calculator",
-    "ci": "Compound Interest Calculator",
-    "pc": "Population Change Calculator",
-    "sc": "Basic Salary Calculator",
-    "sct": "Sin, Cos, Tan",
-    "sct2": "ASin, ACos, ATan",
-    "c2f": "Centigrade to Fahrenheit",
-    "f2c": "Fahrenheit to Centigrade",
-    "numgen": "Random Number Generator",
-    "rpg": "Random Password Generator",
-    "help": "Shows this list",
-    "quit": "Quit the application"
-    }
+    while 1 == 1:
+        print("Enter a command: ")
+        user_input = input("--> ")
 
-    while loop:
-    print("Enter a command: ")
-    user_input = input("--> ")
-
-    try:
-    func = commands[user_input]
-    func()
-    except KeyError:
-    print("")
-    if user_input == "":
-    print("Not a valid command!")
-    else:
-    print(user_input + " is not a valid command!")
-    print("")
+        try:
+            func = commands[user_input]
+            func()
+        except KeyError:
+            print("")
+            if user_input == "":
+                print("Not a valid command!")
+            else:
+                print(user_input + " is not a valid command!")
+                print("")
